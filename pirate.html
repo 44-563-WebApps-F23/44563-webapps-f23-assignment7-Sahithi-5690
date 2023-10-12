@@ -34,44 +34,117 @@
     <div class="Containers">
        <div class="row">
         <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
-        <div class="col-md-2"><img src="treasure pic.jpg" alt="Treasure Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="trap.jpg" alt="Trap" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate pic.jpg" alt="Pirate Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate things.jpg" alt="Pirate Things" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
        </div>   
        <br>
        <div class="row">
         <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
-        <div class="col-md-2"><img src="treasure pic.jpg" alt="Treasure Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="trap.jpg" alt="Trap" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate pic.jpg" alt="Pirate Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate things.jpg" alt="Pirate Things" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
        </div> 
        <br>
        <div class="row">
         <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
-        <div class="col-md-2"><img src="treasure pic.jpg" alt="Treasure Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="trap.jpg" alt="Trap" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate pic.jpg" alt="Pirate Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate things.jpg" alt="Pirate Things" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
        </div> 
        <br>
        <div class="row">
         <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
-        <div class="col-md-2"><img src="treasure pic.jpg" alt="Treasure Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="trap.jpg" alt="Trap" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate pic.jpg" alt="Pirate Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate things.jpg" alt="Pirate Things" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
        </div> 
        <br>
        <div class="row">
         <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
-        <div class="col-md-2"><img src="treasure pic.jpg" alt="Treasure Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="trap.jpg" alt="Trap" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate pic.jpg" alt="Pirate Pic" width="100" height="100"></div>
-        <div class="col-md-2"><img src="pirate things.jpg" alt="Pirate Things" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
+        <div class="col-md-2"><img src="treasure map.jpg" alt="Treasure Map" width="100" height="100"></div>
        </div> 
     </div>
     
+    <script>
+        let ids=["image0","image1","image2","image3","image4","image5","image6","image7","image8","image9","image10","image11","image12","image13","image14","image15","image16","image17","image18","image19","image20","image21","image22","image23","image24"];
+        let checkCount=0;
+        let penalty=0;
+        let lastCheck=0;
+        let treasureLocation=5;
+        let trapLocation=18;
+        let gameOver=false;
+        function check(position)
+        {
+         if(gameOver)
+         {
+            return;
+         }
+        let id=ids[position];
+        let imgElement=document.getElementById(id);
+        if(position===treasureLocation)
+         {
+             imgElement.src ='treasure map.jpg';
+         }
+        else if(position===trapLocation)
+         { 
+             imgElement.src='tarp.jpg';
+         }
+         else
+         {
+             imgElement.src='pirate pic.jpg';
+         }
+        if(position==treasureLocation)
+         {
+            gameOver=true;
+            penalty-=3;
+         }
+        else if(position==trapLocation)
+         {
+            gameOver=true;
+            penalty+=4;
+         }
+        checkCount++;
+        penalty++;
+        document.getElementById('locations').textContent=checkCount;
+        document.getElementById('penalty').textContent=penalty;
+        lastCheck=position;
+        }
+        function help()
+        {
+         if(gameOver)
+          {
+             return;
+          }
+        let treasureRow =Math.floor(treasureLocation/5);
+        let treasureCol=treasureLocation%5;
+        let lastRow = Math.floor(lastCheck/5);
+        let lastCol=lastCheck%5;
+        let rowDiff=Math.abs(treasureRow-lastRow);
+        let colDiff=Math.abs(treasureCol-lastCol);
+        if((rowDiff===1 && colDiff===0)||(rowDiff===0 && colDiff===1))
+         {
+             document.getElementById('help').textContent='can smell it';
+         }
+        else if(rowDiff+colDiff===2)
+         {
+             document.getElementById('help').textContent='Close Matie';
+         }
+        else
+         {
+             document.getElementById('help').textContent='StepFaster';
+         }
+        penalty+=2;
+        document.getElementById('penalty').textContent="penalty is "+penalty;
+        document.getElementById('help').textContent=text;
+        }
+</script>
 </body>
 </html>
